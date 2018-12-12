@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="styles/style-small.css">
+    <link rel="stylesheet" href="styles/style-desktop.css">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" /> <!-- Favicon -->
+</head>
+
+<body>
+
+    <header id="top">
+        
+        <img src="images/skeleton-skull.png" alt="Skull Logo" id="skull-logo" width="80">
+        <h1>Skeleton</h1>
+
+        <nav>
+            <div id="menuToggle">
+            
+                <!-- Hidden checkbox for Hamburger menu -->
+                <input type="checkbox" hidden/>
+                
+                <!-- Hamburger menu -->
+                <span></span>
+                <span></span>
+                <span></span>
+            
+                <!-- Menubar Mobile -->
+                <ul class="menu">
+                    <li><a href="#home">Hem</a></li>
+                    <li><a href="#code">Kod</a>
+                        <ul id="code-menu">
+                            <li><a href="#typography">Typografi</a></li>
+                            <li><a href="#grid">Grid</a></li>
+                            <li><a href="#buttons">Knappar</a></li>
+                            <li><a href="#forms">Formulär</a></li>
+                            <li><a href="#tables">Tabeller</a></li>
+                            <li><a href="#lists">Listor</a></li>
+                            <li><a href="#mq">Media Queries</a></li>
+                        </ul></li>
+                    <li><a href="#why-skeleton">Varför Skeleton?</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+            
+    <!-- Menubar Desktop -->   
+    <img src="images/skeleton-logo.png" alt="" id="desktop-logo" hidden>
+
+    <div class="menu-desktop" hidden>  
+        <a href="#top">Hem</a>
+        <ul>
+            <li><a href="#code">Kod</a>
+                <ul>
+                    <li><a href="#typography">Typografi</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#buttons">Knappar</a></li>
+                    <li><a href="#forms">Formulär</a></li>
+                    <li><a href="#tables">Tabeller</a></li>
+                    <li><a href="#lists">Listor</a></li>
+                    <li><a href="#mq">Media Queries</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#why-skeleton">Varför Skeleton?</a>
+    </div>
+
+    <!-- Main Content Start -->
+    <main>
+        <div class="container lvl1">
+            <h2 id="home">Om</h2>
+            <p>Skeleton är ett gratis ramverk skapat av Dave Gamache. Det är ett minimalistiskt ramverk som passar mindre projekt där man
+                inte kräver lika många funktioner som t.ex. Bootstrap. Perfekt för att komma igång med snabbt och enkelt.
+                Första versionen kom maj 2011 och version 2 kom december 2014. Kort därpå kom även den sista uppdateringen.</p>
+
+            <p>Skeleton använder sig av ett grid-system och består endast av 400 rader kod. Vilket gör den "lätt" och snabb.
+                Designen är elegant och funktionerna är lätta att lära sig. På denna webbplats kommer vi presentera några exempel.</p>
+
+            <p>Skeleton är open source och finns på <a href="https://github.com/dhg/Skeleton" target="_blank">Github</a>.</p>
+            <img src="images/skeleton.jpg" alt="Skeleton Boilerplate Official Logo" width="400">
+        </div>
+
+        <div class="container lvl2">
+            <h2 id="code">Kod</h2>
+            <p id="first-paragraph">Här kommer vi presentera följande funktioner:</p>
+            <div class="codes" hidden>
+                <ul>
+                    <li><a href="#typography">Typografi</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#buttons">Knappar</a></li>
+                    <li><a href="#forms">Formulär</a></li>
+                    <li><a href="#tables">Tabeller</a></li>
+                    <li><a href="#lists">Listor</a></li>
+                    <li><a href="#mq">Media Queries</a></li>
+                </ul>
+            </div>
+
+            <h3 id="typography">Typografi</h3>
+            <p>Skeleton använder sig av typsnittet <a href="https://fonts.google.com/specimen/Raleway" target="_blank">Raleway från Google Fonts.</a>
+                All text är inställd med rem vilket gör att storleken anpassar sig efter root-elementet. Default för Skeleton är
+                1rem = 10px (2rem = 20px). Vilket gör det enkelt att komma ihåg.</p>
+            <img src="images/heading-example.png"  alt="Heading example"        width="600" id="typography-img">
+            <img src="images/heading-example2.png" alt="Heading color example"  width="600" id="typography-img2">
+
+            <h3 id="grid">Grid</h3>
+            <p>Grid-systemet utgör ryggraden (pun intended) för Skeleton. Rutnät med 12 kolumner som är flytande, dvs de
+                ökar/minskar i storlek baserat på skärmens storlek. Med det kan man skapa en snygg design som är responsiv 
+                med endast några få klass-namn.</p>
+            
+            <p>Likt Bootstrap
+                skapar man en wrapper med klass-namnet: container. Maxbredden på denna wrapper är 960px. För att skapa kolumner
+                måste man tilldela en div med två klasser. Den första klassen specifierar kolumnens bredd: <code>"one", "two".. "twelve"</code>.
+                Eller <code>"one-third", "two-thirds"</code>, och <code>"one-half"</code>.</p>
+
+            <p>Den andra klassen anger marginalerna. Det finns två klasser för detta. "column" och "columns". Man kan även 
+                lägga till offset-klasser om man vill ha lite extra luft mellan kolumnerna: <code>"offset-by-one", "offset-by-twelve",
+                "offset-by-two-thirds"</code>.</p>
+
+            <p>Bilden nedan visar hur många kolumner varje rad tar upp.</p>
+            <img src="images/grid-example.png" alt="Grid example" width="600" id="grid-image">
+
+            <h3 id="buttons">Knappar</h3>
+            <p>Standardknapparna är förfinade på två sätt. En svartvit knapp med rundade kanter samt en knapp med blå bakgrund. Båda
+                har en delikat hover-effekt för att ge respons. Dessa skapar man med klasserna: <code>"button"</code> och <code>"button-primary"</code>
+                Gillar man inte alternativen som finns kan man kan enkelt ge knapparna egna färger.</p>
+            <img src="images/buttons-example.png"  alt="Buttons example"        width="600" id="button-img">
+            <img src="images/buttons-cursor.gif"   alt="Buttons cursor example" width="600" id="button-img3">
+            <img src="images/buttons-example2.png" alt="Buttons color example"  width="600" id="button-img2">
+
+            <h3 id="forms">Formulär</h3>
+            <p>Med Skeleton kan man skapa snygga formulär enkelt utan att man behöver lägga ner en massa tid på att göra det snyggt. 
+                Med hjälp av grid-systemet kan man välja hur många kolumner formuläret ska ta upp, samt var varje input ska vara. 
+                Formuläret är givetvis responsivt så man behöver inte tänka på det. </p>
+            <img src="images/forms-desktop.png"  alt="Forms desktop example" width="600" id="forms-desktop-img">
+            <img src="images/forms-desktop2.png" alt="Forms mobile example"  width="600" id="forms-desktop-2-img">
+
+            <h3 id="tables">Tabeller</h3>
+            <p>I Skeleton stylas tabeller automatiskt utan att man behöver ge taggar klassnamn. Genom att skriva vanlig HTML-kod blir resultatet snyggt och responsivt.
+                Det är en bra grund som man kan förfina själv med färger och effekter.</p>
+            <img src="images/tables-example.png"  alt="Tables example"       width="600" id="tables-img">
+            <img src="images/tables-example2.png" alt="Tables color example" width="600" id="tables-img2">
+
+            <h3 id="lists">Listor</h3>
+            <p>Listor har en enklare stil. Sorterade listor använder cirklar medans sorterade listor är numrerade, precis som vanligt.</p>
+            <img src="images/lists-example.png" alt="Lists example" width="600" id="list-image">
+
+            <h3 id="mq">Media Queries</h3>
+            <p>Skeleton använder media queries för att hantera grid-systemet. Det finns även tomma queries där man själv kan skriva
+                sin egen kod för att göra sin sida mer responsiv. Media queries utgår från mobile first då min-width används.</p>
+            <div class="listqueries">
+                <ol>
+                    <li><strong>Mobile:</strong> @media(min-width:<strong>400px</strong>)</li>
+                    <li><strong>Phablet:</strong> @media(min-width:<strong>550px</strong>)</li>
+                    <li><strong>Tablet:</strong> @media(min-width:<strong>750px</strong>)</li>
+                    <li><strong>Desktop:</strong> @media(min-width:<strong>1000px</strong>)</li>
+                    <li><strong>DesktopHD:</strong> @media(min-width:<strong>1200px</strong>)</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container lvl3">
+            <h2 id="why-skeleton">Varför Skeleton?</h2>
+            <p>Skeleton följer 3 principer: Responsiv design, snabb och okomplicerad. Det är enkelt att ladda ner och du kan
+                    börja koda direkt. Om du vill skapa en enkel och responsiv sida som använder grid-systemet, är Skeleton perfekt.</p>
+
+            <div class="pros-and-cons">
+                <div class="pros">
+                    <h4>Fördelar:</h4>
+                    <ul>
+                        <li>Snabb</li>
+                        <li>Responsivt</li>
+                        <li>Lätt att lära sig</li>
+                        <li>Bra grund för egen design</li>
+                        <li>Använder de mest användbara funktionerna</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>Nackdelar:</h4>
+                    <ul>
+                        <li>Inga fler uppdateringar</li>
+                        <li>Ej för större projekt</li>
+                        <li>Skelephobia</li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <p>Exempel på sidor som använder Skeleton: 
+                <a href="https://cssanimation.rocks/"     target="_blank">cssanimation.rocks</a>, 
+                <a href="http://www.archivesalive.co.uk/" target="_blank">archivesalive.co.uk</a> och 
+                <a href="http://getskeleton.com/"         target="_blank">getskeleton.com</a></p>
+        </div>
+    </main>
+    <!-- Main Content End -->
+
+    <footer><a href="#top">&#129093; Top</a></footer>
+    
+</body>
+</html>

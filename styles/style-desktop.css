@@ -1,0 +1,256 @@
+/*_____________________________________
+|                                     |
+|                                     |
+|           MEDIA QUERIES             |
+|                                     |
+|____________________________________*/
+
+/* Desktop-version */
+  
+@media (min-width: 1266px) {
+  body {
+    width: 70%;
+  }
+}
+  
+@media (min-width: 668px) {
+  body {
+    width: 85%;
+    margin: 0 auto;
+  }
+  a:focus {
+    color: black;
+  }
+  
+  /*______________________
+  |                       |
+  |       Navigation      |
+  |______________________*/
+  
+  #menuToggle span, #menuToggle input, header h1, #skull-logo, .menu {
+    display: none;
+  }
+  .navbar {
+    background-color: white;
+    border-bottom: 2px solid #cdcdcd;
+    list-style-type: none;
+    padding: 10px;
+  }
+  @supports (position: sticky) {
+    .navbar {
+      display: flex;
+      justify-content: center;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+    }
+  }
+  .menu-desktop {
+    background-color: white;
+    border-bottom: 2px solid #cdcdcd;
+    display: block;
+    font-size: 2em;
+    padding: 10px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    text-align: center;
+    top: 0;
+    z-index: 10;
+  }
+  .menu-desktop a {
+    padding: 30px;
+    text-decoration: none;
+  }
+  .menu-desktop a:hover, .container a:hover {
+    color: black;
+  }
+  .menu-desktop ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-desktop ul li {
+    display: inline-block;
+  }
+  .menu-desktop ul li:hover ul {
+    display: block;
+  }
+  .menu-desktop ul li ul { /* Dropdown menu */
+    display: none;
+    position: absolute;
+    text-align: left;
+    top: 58px;
+    width: 150px;
+  }
+  .menu-desktop ul li ul li {
+    background-color: plum;
+    border-bottom: 1px solid white;
+    display: block;
+    font-size: 0.6em;
+  }
+  .menu-desktop ul li ul li a {
+    color: white;
+    display: block !important;
+    padding : 10px;
+  }
+  .menu-desktop ul li ul li a:hover {
+    color: black;
+  }
+  
+  /*______________________
+  |                       |
+  |       Container       |
+  |______________________*/
+  
+  .container p, .container h3, .pros-and-cons {
+    padding: 20px 50px;
+  }
+  #first-paragraph {
+    text-align: center;
+  }
+  #home {
+    border-top: none;
+  }
+  .listqueries {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+  }
+  .pros, .cons {
+    float: left;
+    width: 40%;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  @supports (display: flex) {
+    .pros-and-cons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .lvl3 {
+    margin-bottom: 280px;
+  }
+  
+  /*____________
+  |             |
+  |     Kod     |
+  |____________*/
+  
+  .codes {
+    border-bottom: 2px solid #cdcdcd;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  @supports (display: flex) {
+    .codes {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      justify-content: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .codes li {
+    display: inline-block;
+    margin: 18px 18px;
+  }
+  .codes a {
+    border-radius: 5px;
+    border: 1px solid plum;
+    padding: 10px;
+    text-decoration: none;
+  }
+  .codes a:hover {
+    background-color: plum;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  /*__________________
+  |                   |
+  |       Images      |
+  |__________________*/
+  
+  #desktop-logo {
+    display: block;
+    margin: 20px auto;
+    opacity: 0.3;
+    width: 60%;
+  }
+  .container > img {
+    display: inline-block;
+    margin-left: 50px;
+    max-width: 900px;
+    width: 400px;
+  }
+  #typography-img, #typography-img2 {
+    width: 40%;
+  }
+  .lvl1 img, #list-image {
+    display: block;
+    margin: 0 auto;
+  }
+  #tables-img, #tables-img2, #forms-desktop-img, #forms-desktop-2-img, #button-img, #button-img2, #button-img3 {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+  #grid-image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  /*__________________
+  |                   |
+  |       Footer      |
+  |__________________*/
+
+  footer {
+    border: none;
+    bottom: 20px;
+    left: 90%;
+    width: initial;
+  }
+  footer a {
+    border-radius: 5px;
+    font-size: 2em;
+    padding: 5px;
+  }
+  footer a:hover {
+    color: #cdcdcd;
+  }
+}
+
+/* Adjust menubar width */
+@media (min-width: 668px) and (max-width: 900px) {
+  .menu-desktop a {
+    padding: 30px 10px;
+  }
+}
+
+/* IE Specific */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .menu-desktop ul li ul { /* Dropdown Menu */
+    display: none;
+    position: absolute;
+    text-align: left;
+    top: 310px;
+    width: 150px;
+  }
+  footer {
+    border-top: 2px solid #cdcdcd;
+    bottom: 0;
+    left: 0;
+    width: initial;
+  }
+}
