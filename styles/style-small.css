@@ -53,6 +53,7 @@ h2 {
   display: inline;
   list-style: none;
   padding: 0;
+  line-height: 2;
 }
 .listqueries ol, .pros-and-cons ul {
   list-style-type: circle;
