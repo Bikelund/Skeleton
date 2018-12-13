@@ -30,32 +30,21 @@
   #menuToggle span, #menuToggle input, header h1, #skull-logo, .menu {
     display: none;
   }
-  .navbar {
-    background-color: white;
-    border-bottom: 2px solid #cdcdcd;
-    list-style-type: none;
-    padding: 10px;
-  }
-  @supports (position: sticky) {
-    .navbar {
-      display: flex;
-      justify-content: center;
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-    }
-  }
   .menu-desktop {
     background-color: white;
     border-bottom: 2px solid #cdcdcd;
     display: block;
     font-size: 2em;
     padding: 10px;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
     text-align: center;
-    top: 0;
-    z-index: 10;
+  }
+  @supports (position: sticky) {
+    .menu-desktop {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
   }
   .menu-desktop a {
     padding: 30px;
@@ -109,7 +98,7 @@
   #first-paragraph {
     text-align: center;
   }
-  #home {
+  #about {
     border-top: none;
   }
   .listqueries {
