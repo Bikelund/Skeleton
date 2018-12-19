@@ -1,5 +1,7 @@
 /*  Mobile-version < 668 px */
-
+html {
+  scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
 }
